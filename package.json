@@ -1,0 +1,22 @@
+{
+  "name": "ui5_official_toturial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daoshihaideba/uit_learning.git"
+  },
+  "author": "hans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daoshihaideba/uit_learning/issues"
+  },
+  "homepage": "https://github.com/daoshihaideba/uit_learning#readme",
+  "devDependencies": {
+    "@ui5/cli": "^3.1.2"
+  }
+}
