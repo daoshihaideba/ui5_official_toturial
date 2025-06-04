@@ -10,7 +10,7 @@ sap.ui.define(
     return UIComponent.extend("sap.ui.demo.walkthrough.Component", {
       metadata: {
         interfaces: ["sap.ui.core.IAsyncContentCreation"],
-        menifest: "json",
+        manifest: "json",
       },
       init: function () {
         // call the init function of the parent
