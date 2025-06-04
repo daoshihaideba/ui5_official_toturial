@@ -17,6 +17,16 @@ sap.ui.define(
                 "Did not find the 'Say Hello With Dialog' button on the HelloPanel view",
             });
           },
+          iPressTheOkButtonOnTheDialog: function () {
+            return this.waitFor({
+              controlType: "sap.m.Button",
+              properties: {
+                text: "Ok",
+              },
+              actions: new Press(),
+              errorMessage: "Did not find the 'Ok' button on the dialog",
+            });
+          },
         },
 
         assertions: {
@@ -28,6 +38,20 @@ sap.ui.define(
                 Opa5.assert.ok(true, "The dialog is open");
               },
               errorMessage: "Did not find the dialog control",
+            });
+          },
+          iShouldNotSeeAnyDialog: function () {
+            return this.waitFor({
+              controlType: "sap.m.Dialog",
+              visible: true,
+              searchOpenDialogs: true,
+              check: function (aDialogs) {
+                return aDialogs.length === 0;
+              },
+              success: function () {
+                Opa5.assert.ok(true, "The dialog is closed");
+              },
+              errorMessage: "The dialog is still open",
             });
           },
         },

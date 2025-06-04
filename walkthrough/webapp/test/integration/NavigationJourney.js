@@ -28,6 +28,12 @@ sap.ui.define(
       // Assertions
       Then.onTheAppPage.iShouldSeeTheHelloDialog();
 
+      //Actions
+      When.onTheAppPage.iPressTheOkButtonOnTheDialog();
+
+      // Assertions
+      Then.onTheAppPage.iShouldNotSeeAnyDialog();
+
       // Cleanup
       Then.iTeardownMyApp();
     });
